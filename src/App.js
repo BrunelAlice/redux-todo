@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// Import style from MDB
+import
+{
+        MDBCard,
+        MDBCardBody,
+        MDBCol,
+        MDBContainer,
+        MDBRow,
+} from "mdb-react-ui-kit";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+// Import components
+import List from './Components/List';
+import AddTodo from './Components/AddTodo';
+
+
+
+function App()
+{
+
+
+    // Render page content
+    return (
+        <section className="vh-100" style={{ backgroundColor: "#e2d5de" }}>
+            <MDBContainer className="py-5 h-100">
+                <MDBRow className="d-flex justify-content-center align-items-center">
+                    <MDBCol xl="10">
+                        <MDBCard style={{ borderRadius: "15px" }}>
+                            <MDBCardBody className="p-5">
+                                <h6 className="mb-3">Redux Todo List</h6>
+                                <AddTodo />
+                                <List/>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
+        </section>
+    );
 }
 
 export default App;
