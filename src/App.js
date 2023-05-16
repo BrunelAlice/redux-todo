@@ -27,7 +27,7 @@ function App()
                     <MDBCol xl="10">
                         <MDBCard style={{ borderRadius: "15px" }}>
                             <MDBCardBody className="p-5">
-                                <h6 className="mb-3">Redux Todo List</h6>
+                                <h6 className="mb-3">Simple Redux Todo List</h6>
                                 <AddTodo />
                                 <List/>
                             </MDBCardBody>
